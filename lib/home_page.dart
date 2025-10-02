@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'book.dart';
 import 'book_detail.dart';
+import 'login_page.dart';
 
 class HomePage extends StatefulWidget {
   final String username;
@@ -50,9 +51,14 @@ class _HomePageState extends State<HomePage> {
         title: Text('Welcome, ${widget.username}!'),
         automaticallyImplyLeading: false,
         actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 16.0),
-            child: CircleAvatar(child: Text(widget.username[0].toUpperCase())),
+          IconButton(
+            icon: const Icon(Icons.logout, color: Colors.white),
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()),
+              );
+            },
           ),
         ],
       ),

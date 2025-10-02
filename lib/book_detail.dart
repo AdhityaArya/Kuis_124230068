@@ -68,7 +68,10 @@ class BookDetailPage extends StatelessWidget {
                       ),
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text("Berhasil Membeli ")),
+                          const SnackBar(
+                            content: Text('Berhasil Membeli Buku!'),
+                            backgroundColor: Colors.green,
+                          ),
                         );
                       },
                       child: const Text('Beli'),
