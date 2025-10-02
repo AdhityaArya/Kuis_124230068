@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'book.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'home_page.dart';
 
 class BookDetailPage extends StatelessWidget {
   final Book book;
@@ -67,7 +68,7 @@ class BookDetailPage extends StatelessWidget {
                       ),
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text("Berhasil Membeli")),
+                          const SnackBar(content: Text("Berhasil Membeli ")),
                         );
                       },
                       child: const Text('Beli'),
